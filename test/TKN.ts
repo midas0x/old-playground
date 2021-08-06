@@ -10,7 +10,7 @@ import { Signers } from "../types";
 const { deployContract } = hre.waffle;
 
 describe("TKN", () => {
-  before(async function () {
+  beforeEach(async function () {
     this.signers = {} as Signers;
     const signers: SignerWithAddress[] = await hre.ethers.getSigners();
     this.signers.admin = signers[0];
